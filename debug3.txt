@@ -1,0 +1,18 @@
+FF seasons: [np.float64(2026.0), np.float64(nan)]
+FF total rows: 1732
+Adv seasons: [np.float64(2026.0), np.float64(nan)]
+Adv total rows: 1732
+After FF merge - oppEfgPct NaN rate: 0.9884276955824377
+oppEfgPct NaN by season:
+season
+2017    1.000000
+2018    1.000000
+2019    1.000000
+2020    1.000000
+2021    1.000000
+2022    1.000000
+2023    1.000000
+2024    1.000000
+2025    1.000000
+2026    0.341858
+Name: oppEfgPct, dtype: float64

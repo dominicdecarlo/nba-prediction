@@ -1,0 +1,55 @@
+python : WARNING: All 
+log messages before 
+absl::InitializeLog() 
+is called are written 
+to STDERR
+At line:1 char:1
++ python -c "
++ ~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (WARNING: All    
+ lo...itten to STDE    
+RR:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+I0000 00:00:1775507584.
+711814   32024 
+port.cc:153] oneDNN 
+custom operations are 
+on. You may see 
+slightly different 
+numerical results due 
+to floating-point 
+round-off errors from 
+different computation 
+orders. To turn them 
+off, set the 
+environment variable `T
+F_ENABLE_ONEDNN_OPTS=0`
+.
+WARNING: All log 
+messages before 
+absl::InitializeLog() 
+is called are written 
+to STDERR
+I0000 00:00:1775507587.
+248765   32024 
+port.cc:153] oneDNN 
+custom operations are 
+on. You may see 
+slightly different 
+numerical results due 
+to floating-point 
+round-off errors from 
+different computation 
+orders. To turn them 
+off, set the 
+environment variable `T
+F_ENABLE_ONEDNN_OPTS=0`
+.
+Plot exists: True
+Files: ['nba_prediction.ipynb', 'nba_prediction_results.png']

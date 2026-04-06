@@ -1,0 +1,5 @@
+Merged shape: (66712, 5)
+Season values: [np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025), np.int64(2026)]
+Season 2025 count: 1226
+Seasons 2015-2024 count: 11913
+Season dtype: int64

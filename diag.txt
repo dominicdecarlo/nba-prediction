@@ -1,0 +1,24 @@
+﻿gameType values: ['Regular Season' 'All-Star Game' 'Emirates NBA Cup' 'Preseason'
+ 'Playoffs' 'Play-in Tournament' 'NBA Cup' 'NBA Emirates Cup']
+TeamStats columns (gameType?): False
+season
+2012     990
+2013    1229
+2014    1230
+2015    1230
+2016    1230
+2017    1230
+2018    1230
+2019    1230
+2020    1059
+2021    1080
+2022    1230
+2023    1230
+2024    1164
+2025    1226
+2026    1172
+dtype: int64
+
+Test season 2025: 1226 games
+home values: [1 0]
+home=1: 66712 home=0: 66710

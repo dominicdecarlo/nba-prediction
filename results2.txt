@@ -1,0 +1,14 @@
+Fetching tonight's NBA schedule from nba_api...
+Found 5 games for today.
+Loading trained models...
+Computing latest team stats and Elo...
+
+=================================================================
+        TONIGHT's PREDICTIONS (HOME WIN % & ODDS)
+=================================================================
+New York Knicks @ Atlanta Hawks     | Home Win:  64.2% | Fair Odds: -179
+Detroit Pistons @ Orlando Magic     | Home Win:  38.8% | Fair Odds: +158
+Cleveland Cavaliers @ Memphis Grizzlies | Home Win:  24.2% | Fair Odds: +313
+Philadelphia 76ers @ San Antonio Spurs | Home Win:  74.4% | Fair Odds: -290
+Portland Trail Blazers @ Denver Nuggets | Home Win:  60.7% | Fair Odds: -154
+=================================================================

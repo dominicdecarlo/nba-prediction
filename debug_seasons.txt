@@ -1,0 +1,27 @@
+Season counts:
+season
+2012     990
+2013    1229
+2014    1230
+2015    1230
+2016    1230
+2017    1230
+2018    1230
+2019    1230
+2020    1059
+2021    1080
+2022    1230
+2023    1230
+2024    1164
+2025    1226
+2026    1172
+dtype: int64
+
+Season 2025 count: 1226
+Seasons 2015-2024 count: 11913
+
+TeamStats seasons: [np.int64(2017), np.int64(2018), np.int64(2019), np.int64(2020), np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025), np.int64(2026)]
+TeamStats home=1 count: 66712
+TeamStats home=0 count: 66710
+TeamStats season 2025: 2452
+Total TeamStats rows: 133422
