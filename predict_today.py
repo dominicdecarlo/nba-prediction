@@ -80,18 +80,32 @@ ts = ts.sort_values(['teamId','gameDateTimeEst']).reset_index(drop=True)
 HOME_ADV = 100; K = 20
 def get_season(dt): return dt.year + 1 if dt.month >= 10 else dt.year
 h_games['season'] = h_games['gameDateTimeEst'].apply(get_season)
-ss = sorted(h_games['season'].unique()); s2w = {s:i//2 for i,s in enumerate(ss)}
+ss = sorted(h_games['season'].unique()); s2w = {s:s for s in ss}
 elo = {}; cw = -1
 for _,g in h_games.iterrows():
     w = s2w[g['season']]
-    if w != cw: elo = {t:1500 for t in elo}; cw = w
+    if w != cw:
+        for t in elo: elo[t] = elo[t] * 0.8 + 1500 * 0.2
+        cw = w
     for t in [g['hometeamId'],g['awayteamId']]:
         if t not in elo: elo[t] = 1500
     if pd.isna(g['homeScore']): continue
+    
     ha = elo[g['hometeamId']]+HOME_ADV
     eh = 1.0/(1.0+10**((elo[g['awayteamId']]-ha)/400))
     hw = 1.0 if g['homeScore']>g['awayScore'] else 0.0
-    elo[g['hometeamId']] += K*(hw-eh); elo[g['awayteamId']] += K*((1-hw)-(1-eh))
+    
+    mov = max(1, abs(g['homeScore'] - g['awayScore']))
+    winner_elo = elo[g['hometeamId']] + HOME_ADV if hw == 1.0 else elo[g['awayteamId']]
+    loser_elo = elo[g['awayteamId']] if hw == 1.0 else elo[g['hometeamId']] + HOME_ADV
+    elo_diff = winner_elo - loser_elo
+    
+    mov_ratio = min(1.0, (mov - 1) / 29.0)
+    multiplier = (1.0 + mov_ratio) * max(0.1, 1.0 - (elo_diff / 500.0))
+    multiplier = min(2.0, multiplier)
+    
+    elo[g['hometeamId']] += K * multiplier * (hw - eh)
+    elo[g['awayteamId']] += K * multiplier * ((1 - hw) - (1 - eh))
 
 # Map team names to IDs (Approximation using known mappings from API to Kaggle dataset)
 # Using a name to ID dictionary to match API teams to historical IDs
